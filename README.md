@@ -57,7 +57,8 @@ plaso-dl/
   │   ├── config.py          # 用户偏好与授权信息持久化
   │   └── util.py            # 文件名清洗与单位转换工具
   │
-  └── dist/                  # 打包后的单体可执行文件
+  ├── build/                 # PyInstaller 中间产物（本地生成，不入库）
+  └── dist/                  # 打包后的单体可执行文件（本地生成，不入库）
 ```
 
 ---
@@ -96,7 +97,7 @@ python plaso_dl_app.py
 ```bash
 build_exe.bat
 ```
-打包后的 EXE 将存放在 `dist/Plaso-DL-App.exe`。
+打包后的 EXE 将存放在 `dist/Plaso-DL-App.exe`。`build/` 与 `dist/` 都是本地生成目录，已写入 `.gitignore`，不要提交到仓库。
 
 ---
 
